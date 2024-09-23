@@ -1,0 +1,218 @@
+body {
+    background-color: #101414;
+    font-family: 'Inter';
+    min-height: 100vh;
+    background-image: linear-gradient(to right, #46464649 0.05vw, transparent 0.05vw), linear-gradient(to bottom, #46464650 0.05vw, transparent 0.05vw);
+    background-size: 7vw 7vw;
+    overflow-x: hidden;
+    transition: background-position 0.1s;
+    animation: moveBackground 100s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 70vw 70vw;
+    }
+}
+
+#title {
+    --bg-size: 400%;
+    --color-one: #2a8ebd;
+    --color-two: #619cb8;
+    font-size: 2.5vw;
+    background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: gradient 20s infinite linear;
+    font-weight: 600;
+    text-align: center;
+    transition: filter 0.3s;
+    text-shadow: 0vw 0vw 4.5vw #ffffffad;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    #title {
+      animation: gradient 8s linear infinite;
+    }
+    @keyframes gradient {
+      to {
+        background-position: var(--bg-size) 0;
+      }
+    }
+}
+
+#title:hover {
+    filter: drop-shadow(0 0 0.7vw #2a8ebd);
+}
+
+.navbar {
+    position: fixed;
+    top: 0; /* Align to the top */
+    right: 0; /* Align to the right */
+    z-index: 100;
+    background-color: #101414;
+    padding: 1rem;
+}
+
+.navbar a {
+    font-weight: 300;
+    float: left;
+    display: block;
+    color: #6cafce56;
+    text-align: center;
+    padding: 0.15vw 1.9vw;
+    text-decoration: none;
+    font-size: 1.45vw;
+    transition: color 0.5s, font-size 0.4s, filter 0.7s;
+    text-align: center;
+}
+
+.navbar a:hover {
+    color: #61abce;
+    font-size: 1.65vw;
+    filter: drop-shadow(0 0 0.7vw #61abce);
+}
+
+.navbar a.active {
+    color: #61abce;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    border-radius: 0.8vw;
+    width: 50vw;
+    height: 10vh;
+}
+
+.landing {
+    background-color: #08090a;
+    margin-top: 15vh;
+    height: 20vh;
+    position: relative;
+}
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.landing::after, .landing::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 95%, #619cb8);
+    z-index: -1;
+    padding: 0.1vw;
+    top: -0.2vh;
+    left: -0.075vw;
+    border-radius: 0.8vw;
+    animation: 15s line linear infinite;
+}
+
+@keyframes line {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+.landing::before {
+    filter: blur(0.5vw);
+    opacity: 0.75;
+    background-color: #08090a;
+}
+
+.projekter {
+    background-color: #08090a;
+    position: relative;
+    margin-top: 8vh;
+}
+
+.projekter::before {
+    filter: blur(0.5vw);
+    opacity: 0.75;
+    background-color: #08090a;
+}
+
+.projekter::after, .projekter::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 95%, #619cb8);
+    z-index: -1;
+    padding: 0.1vw;
+    top: -0.2vh;
+    left: -0.075vw;
+    border-radius: 0.8vw;
+    animation: 15s line linear infinite;
+}
+
+.kontakt {
+    margin-top: 8vh;
+    height: 40vh;
+    background-color: #08090a;
+    position: relative;
+}
+
+.kontakt::before {
+    filter: blur(0.5vw);
+    opacity: 0.75;
+    background-color: #08090a;
+}
+
+.kontakt::after, .kontakt::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 95%, #619cb8);
+    z-index: -1;
+    padding: 0.1vw;
+    top: -0.2vh;
+    left: -0.075vw;
+    border-radius: 0.8vw;
+    animation: 15s line linear infinite;
+}
+
+.kontakt h2 {
+    font-size: 1.5vw;
+    color: white;
+    margin-top: 7.5vh;
+}
+
+.kontakt-form {
+    margin-top: -6vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+}
+ 
+textarea {
+    resize: none;
+    width: 9vw;
+    height: 8vh;
+    font-size: 0.8vw;
+}
+input, button {
+    width: 9vw;
+    height: 2.5vh;
+    font-size: 0.8vw;
+}
