@@ -57,15 +57,19 @@
         </section>
         <section class="kontakt" id="kontakt">
             <article class="kontakt-container">
-                <form action="mailto:liselottelone@gmail.com?subject=Kontakt Form&body=Navn: %20navn%0D%0AEmail: %20email%0D%Besked: %20besked" method="post" enctype="text/plain" class="kontakt-form">
+                <form action="" class="kontakt-form">
                     <section class="kontakt-titel">
                         <h1 id="title">Kontakt</h1>
                     </section>
                     <input type="text" name="navn" placeholder="Dit Navn" class="kontakt-input button1" required>
-                    <input type="email" name="email" placeholder="Din Email" class="kontakt-input" required>
-                    <textarea name="besked" placeholder="Din Besked" class="kontakt-input"></textarea>
-                    <button type="submit">Send</button>
+                    <input type="text" name="emne" placeholder="Emne" class="kontakt-input">
+                    <textarea maxlength="300" name="besked" placeholder="Din Besked" class="kontakt-input"></textarea>
+                    <button type="submit" id="send-button">Send</button>
                 </form>
+                <div id="tæller">
+                    <span id="nuværende">0</span>
+                    <span id="maks">/ 300</span>
+                  </div>
             </article>
         </section>
     </div>

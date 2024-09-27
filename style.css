@@ -206,7 +206,7 @@ section {
 
 .kontakt {
     margin-top: 8vh;
-    height: 55vh;
+    height: 70vh;
     background: #0a0b0c;
     border-radius: 0.8vw;
     box-shadow: 0 0.2vw 0.1vw rgba(0, 0, 0, 0.1);
@@ -225,6 +225,7 @@ section {
 
 .kontakt #title {
     margin-top: -3vh;
+    z-index: 10;
 }
 
 .kontakt-form {
@@ -232,19 +233,46 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2vw;
+    gap: 1.5vw;
+    z-index: 2;
+    height: 100%;
+    margin-top: 6vh;
+}
+
+#tæller {
+    margin-top: -21.25vh;
+    margin-left: 25.65vw;
+    font-size: 0.8vw;
 }
  
+span {
+    color: white;
+    opacity: 0.45;
+}
+
 textarea {
     resize: none;
-    width: 9vw;
-    height: 8vh;
-    font-size: 0.8vw;
+    width: 16vw;
+    height: 25vh;
+    font-size: 0.95vw;
+    overflow: hidden;
+    margin-left: 25.5vw;
+    color: #fff;
+    background-color: #161718;
 }
 input, button {
-    width: 9vw;
-    height: 2.5vh;
-    font-size: 0.8vw;
+    width: 16vw;
+    height: 3.75vh;
+    margin-left: 25.5vw;
+    font-size: 0.95vw;
+    z-index: 11;
+    color: #fff;
+    background-color: #161718;
+}
+
+button {
+    margin-top: 2vh;
+    width: 16.5vw;
 }
 
 .button1 {
@@ -252,8 +280,8 @@ input, button {
 }
 
 input, button, textarea {
-    border: 0.1vw solid #ccc;
-    border-radius: 0.2vw;
+    border: 0.15vw solid #4d4d4d;
+    border-radius: 0.3vw;
   }
 
 .profile {
