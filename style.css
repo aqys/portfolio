@@ -1,8 +1,8 @@
 body {
-    background-color: #101414;
+    background-color: #000000;
     font-family: 'Inter';
     min-height: 100vh;
-    background-image: linear-gradient(to right, #46464649 0.05vw, transparent 0.05vw), linear-gradient(to bottom, #46464650 0.05vw, transparent 0.05vw);
+    background-image: linear-gradient(to right, #262626 0.05vw, transparent 0.05vw), linear-gradient(to bottom, #262626 0.05vw, transparent 0.05vw);
     background-size: 7vw 7vw;
     overflow-x: hidden;
     transition: background-position 0.1s;
@@ -20,14 +20,14 @@ body {
 
 #title {
     --bg-size: 400%;
-    --color-one: #68b2d4;
-    --color-two: #365564;
+    --color-one: #125f93;
+    --color-two: #30a3f2;
     font-size: 2.5vw;
     background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0 / var(--bg-size) 100%;
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    animation: gradient 0.1s infinite linear;
+    animation: gradient 10s infinite linear;
     font-weight: 600;
     text-align: center;
     transition: filter 0.4s, color 0.4s;
@@ -35,15 +35,16 @@ body {
     width: 20vw;
     height: 10vh;
     z-index: 10;
+
 }
 
 #title:hover {
-    color: #48b2e4;
+    color: #8bc3e9;
 }
 
 @media (prefers-reduced-motion: no-preference) {
     #title {
-      animation: gradient 8s linear infinite;
+      animation: gradient 10s linear infinite;
     }
     @keyframes gradient {
       to {
@@ -53,39 +54,7 @@ body {
 }
 
 #title:hover {
-    filter: drop-shadow(0 0 0.7vw #2a8ebd);
-}
-
-.navbar {
-    position: fixed;
-    top: 0; /* Align to the top */
-    right: 0; /* Align to the right */
-    z-index: 100;
-    background-color: #101414;
-    padding: 1rem;
-}
-
-.navbar a {
-    font-weight: 300;
-    float: left;
-    display: block;
-    color: #6cafce56;
-    text-align: center;
-    padding: 0.15vw 1.9vw;
-    text-decoration: none;
-    font-size: 1.45vw;
-    transition: color 0.5s, font-size 0.4s, filter 0.7s;
-    text-align: center;
-}
-
-.navbar a:hover {
-    color: #68b2d4;
-    font-size: 1.65vw;
-    filter: drop-shadow(0 0 0.7vw #68b2d4);
-}
-
-.navbar a.active {
-    color: #68b2d4;
+    filter: drop-shadow(0 0 0.7vw #8bc3e9);
 }
 
 main {
@@ -103,13 +72,13 @@ section {
 }
 
 .landing {
-    background: rgba(0, 0, 0, 0.46);
+    background: #0a0b0c;
     border-radius: 0.8vw;
-    box-shadow: 0 0.2vw 2vw rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.2vw 0.1vw rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(1vw);
     -webkit-backdrop-filter: blur(1vw);
-    border: 0.15vw solid rgba(0, 0, 0, 0.5);
-    opacity: 0.8;
+    border: 0.1vw solid rgba(255, 255, 255, 0.2);
+    opacity: 1;
     margin-top: 15vh;
     height: 80vh;
     position: relative;
@@ -134,6 +103,8 @@ section {
     border-radius: 0.8vw;
     box-sizing: border-box;
     overflow: hidden;
+    filter: blur(0.09vw);
+    box-shadow: 0 0 2.5vw -1.5vw #125f934f;
 }
 
 .big-section::before {
@@ -145,13 +116,13 @@ section {
     margin: 1;
     width: 45.5vw;
     height: 100%;
-    border-radius: 0.8vw;
+    border-radius: 1.2vw;
     z-index: 10;
     border: 0.5vw solid;
-    border-image: conic-gradient(from var(--angle), transparent 97%, #68b2d4) 1;
+    border-image: conic-gradient(from var(--angle), transparent 95%, #30a3f2) 5;
     animation: line var(--duration) linear infinite;
     transition: background 0.1s;
-    opacity: 0.75;
+    opacity: 1;
     box-sizing: border-box;
     mix-blend-mode: screen;
 }
@@ -169,7 +140,14 @@ section {
     box-sizing: border-box;
 }
 
-
+#navn {
+    color: #dae8f2;
+    font-weight: 100;
+    font-size: 1.7vw;
+    letter-spacing: 0.15vw;
+    margin-top: 0.5vh;
+    margin-bottom: -2vh;
+}
 
 @property --angle {
     syntax: '<angle>';
@@ -179,7 +157,7 @@ section {
 
 @property --duration {
     syntax: '<time>';
-    initial-value: 6.5s;
+    initial-value: 8s;
     inherits: false;
 }
 
@@ -208,13 +186,13 @@ section {
 }
 
 .projekter {
-    background: rgba(0, 0, 0, 0.46);
+    background: #0a0b0c;
     border-radius: 0.8vw;
-    box-shadow: 0 0.2vw 2vw rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.2vw 0.1vw rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(1vw);
     -webkit-backdrop-filter: blur(1vw);
-    border: 0.15vw solid rgba(0, 0, 0, 0.5);
-    opacity: 0.8;
+    border: 0.1vw solid rgba(255, 255, 255, 0.2);
+    opacity: 1;
     position: relative;
     margin-top: 8vh;
     height: 120vh;
@@ -229,13 +207,13 @@ section {
 .kontakt {
     margin-top: 8vh;
     height: 55vh;
-    background: rgba(0, 0, 0, 0.46);
+    background: #0a0b0c;
     border-radius: 0.8vw;
-    box-shadow: 0 0.2vw 2vw rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.2vw 0.1vw rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(1vw);
     -webkit-backdrop-filter: blur(1vw);
-    border: 0.15vw solid rgba(0, 0, 0, 0.5);
-    opacity: 0.8;
+    border: 0.1vw solid rgba(255, 255, 255, 0.2);
+    opacity: 1;
     position: relative;
 }
 
@@ -276,4 +254,179 @@ input, button {
 input, button, textarea {
     border: 0.1vw solid #ccc;
     border-radius: 0.2vw;
+  }
+
+.profile {
+    border-radius: 50%;
+    width: 11vw;
+    height: 11vw;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    filter: drop-shadow(0 0 0.95vw #ffffff2f);
+    border: #ffffff38 0.12vw solid;
+}
+
+h3 {
+    font-weight: 100;
+    color: #dde7ee;
+    font-size: 0.82vw;
+    margin-top: -0.5vw;
+    line-height: 2.25vh;
+}
+
+.landing {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.landing h1 {
+    margin-left: 12.75vw;
+}
+
+.landing-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 7vw;
+}
+
+.profile-section, .about-section {
+    margin-top: -5vh;
+    width: 22.4vw;
+}
+
+.profile-section {
+    display: flex;
+    justify-content: center;
+  }
+
+  .profile-container {
+    text-align: center;
+  }
+
+.profile {
+    margin: 0 auto;
+}
+
+.profile-section h1 {
+    margin-top: 2.5vh;
+    margin-left: 0;
+    filter: drop-shadow(0 0 1.2vw #30a4f2a8);
+    font-size: 1.2vw;
+    --bg-size: 400%;
+    --color-one: #125f93;
+    --color-two: #30a3f2;
+    background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: gradient 8s linear infinite;
+}
+
+#intro {
+    font-size: 1.8vw;
+    margin-left: 25%;
+    filter: drop-shadow(0 0 1.2vw #30a4f2fa);
+    --bg-size: 400%;
+    --color-one: #125f93;
+    --color-two: #30a3f2;
+    background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: gradient 8s linear infinite;
+}
+
+.about-section p {
+    color: #dde7ee;
+    font-size: 1vw;
+    display: inline-block; 
+    text-align: left;
+    width: 20vw;
+    margin-left: 1.5vw;
+}
+
+.icon {
+    width: 2vw;
+    height: 2vw;
+    margin-left: 0.25vw;
+    fill: #fff;
+    opacity: 0.35;
+    transition: opacity 0.3s;
+}
+
+.icon:hover {
+    opacity: 1;
+}
+
+.hyperlinks {
+    position: absolute;
+    margin-top: 59.75vh;
+    height: 11vh;
+    width: 20.5vw;
+    margin-left: 0vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hyperlinks a {
+    font-weight: 300;
+    color: #125f93;
+    text-align: center;
+    padding: 0.15vw 0.5vw;
+    font-size: 1.15vw;
+    transition: color 0.5s, font-size 0.4s, filter 0.7s, margin-top 0.4s;
+    text-align: center;
+}
+
+.hyperlinks a:hover {
+    color: #30a3f2;
+    font-size: 1.3vw;
+    filter: drop-shadow(0 0 0.7vw #30a3f2);
+    margin-top: -0.2vw;
+}
+
+.hyperlinks a.active {
+    color: #30a3f2;
+}
+
+.godkendt {
+    color: #dae8f2;
+    font-size: 0.85vw;
+    font-weight: 100;
+    text-decoration: none;
+    opacity: 0.4;
+    position: absolute;
+    margin-top: 29.25vw;
+    transition: opacity 0.3s, font-size 0.3s, margin-top 0.3s;
+}
+
+a {
+    text-decoration: none;
+}
+
+.godkendt:hover {
+    opacity: 1;
+    margin-top: 28.95vw;
+    font-size: 0.9vw;
+}
+
+.godkendt::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.1vw;
+    border-radius: 0.4vw;
+    background-color: #dae8f2;
+    bottom: 0;
+    left: 0;
+    top: 2.25vh;
+    transform-origin: right;
+    transform: scaleX(0);
+    opacity: 0.85;
+    transition: transform .3s ease-in-out;
+}
+
+.godkendt:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
   }
