@@ -21,4 +21,24 @@ document.addEventListener('DOMContentLoaded', function() {
         var emailLink = 'mailto:mikkelmartinlarsen@gmail.com?subject=' + emne + '&body=Navn: ' + navn + '%0D%0ABesked: ' + besked;
         window.location.href = emailLink;
     });
+
+        // Get all hyperlinks on the page
+    const hyperlinks = document.querySelectorAll('.hyperlinks a');
+
+    // Add an event listener to each hyperlink
+    hyperlinks.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        // Prevent the default link behavior
+        event.preventDefault();
+
+        // Get the href attribute of the link
+        const href = link.getAttribute('href');
+
+        // Get the element with the matching ID
+        const targetElement = document.querySelector(href);
+
+        // Scroll to the target element with a smooth animation
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
   });

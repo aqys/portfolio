@@ -1,12 +1,12 @@
 body {
-    background-color: #000000;
+    background-color: #060606;
     font-family: 'Inter';
     min-height: 100vh;
-    background-image: linear-gradient(to right, #262626 0.05vw, transparent 0.05vw), linear-gradient(to bottom, #262626 0.05vw, transparent 0.05vw);
-    background-size: 7vw 7vw;
+    background-image: linear-gradient(to right, #262626c7 0.075vw, transparent 0.075vw), linear-gradient(to bottom, #262626c7 0.075vw, transparent 0.075vw);
+    background-size: 10vw 10vw;
     overflow-x: hidden;
     transition: background-position 0.1s;
-    animation: moveBackground 100s linear infinite;
+    animation: moveBackground 80s linear infinite;
 }
 
 @keyframes moveBackground {
@@ -20,8 +20,8 @@ body {
 
 #title {
     --bg-size: 400%;
-    --color-one: #125f93;
-    --color-two: #30a3f2;
+    --color-one: #0a327e;
+    --color-two: #179af2;
     font-size: 2.5vw;
     background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0 / var(--bg-size) 100%;
     color: transparent;
@@ -31,15 +31,14 @@ body {
     font-weight: 600;
     text-align: center;
     transition: filter 0.4s, color 0.4s;
-    text-shadow: 0vw 0vw 4.5vw #ffffffad;
+    text-shadow: 0vw 0vw 2.5vw #ffffff3a;
     width: 20vw;
     height: 10vh;
     z-index: 10;
-
 }
 
 #title:hover {
-    color: #8bc3e9;
+    color: #56abe3;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -54,7 +53,7 @@ body {
 }
 
 #title:hover {
-    filter: drop-shadow(0 0 0.7vw #8bc3e9);
+    filter: drop-shadow(0 0 0.7vw rgba(139, 195, 233, 0.534));
 }
 
 main {
@@ -96,7 +95,7 @@ section {
     position: absolute;
     width: 45.5vw;
     margin-top: 6.75vh;
-    height: 272.5vh;
+    height: 287.25vh;
     z-index: 0;
     background-color: transparent;
     left: 27.1%;
@@ -121,7 +120,6 @@ section {
     border: 0.5vw solid;
     border-image: conic-gradient(from var(--angle), transparent 95%, #30a3f2) 5;
     animation: line var(--duration) linear infinite;
-    transition: background 0.1s;
     opacity: 1;
     box-sizing: border-box;
     mix-blend-mode: screen;
@@ -241,7 +239,7 @@ section {
 
 #tæller {
     margin-top: -21.25vh;
-    margin-left: 25.65vw;
+    margin-left: 22.65vw;
     font-size: 0.8vw;
 }
  
@@ -256,14 +254,14 @@ textarea {
     height: 25vh;
     font-size: 0.95vw;
     overflow: hidden;
-    margin-left: 25.5vw;
+    margin-left: 22.5vw;
     color: #fff;
     background-color: #161718;
 }
 input, button {
     width: 16vw;
     height: 3.75vh;
-    margin-left: 25.5vw;
+    margin-left: 22.5vw;
     font-size: 0.95vw;
     z-index: 11;
     color: #fff;
@@ -273,6 +271,22 @@ input, button {
 button {
     margin-top: 2vh;
     width: 16.5vw;
+    transition: background-color 0.25s, box-shadow 0.25s, transform 0.25s, color 0.35s, font-size 0.35s;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.95);
+    background-color: #232425;
+    box-shadow: #ffffff1c 0 0 1vw;
+    color: #00aeff;
+    font-size: 0.925vw;
+}
+
+button:hover {
+    background-color: #232425;
+    box-shadow: #ffffff1c 0 0 1vw;
+    color: #00aeff;
 }
 
 .button1 {
@@ -341,13 +355,13 @@ h3 {
     filter: drop-shadow(0 0 1.2vw #30a4f2a8);
     font-size: 1.2vw;
     --bg-size: 400%;
-    --color-one: #125f93;
-    --color-two: #30a3f2;
+    --color-one: #0a327e;
+    --color-two: #179af2;
     background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0 / var(--bg-size) 100%;
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    animation: gradient 8s linear infinite;
+    animation: gradient 20s linear infinite;;
 }
 
 #intro {
@@ -355,13 +369,14 @@ h3 {
     margin-left: 25%;
     filter: drop-shadow(0 0 1.2vw #30a4f2fa);
     --bg-size: 400%;
-    --color-one: #125f93;
-    --color-two: #30a3f2;
+    --color-one: #0a327e;
+    --color-two: #179af2;
     background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0 / var(--bg-size) 100%;
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    animation: gradient 8s linear infinite;
+    margin-top: 1.5vh;
+    animation: gradient 20s linear infinite;
 }
 
 .about-section p {
@@ -410,7 +425,7 @@ h3 {
     color: #30a3f2;
     font-size: 1.3vw;
     filter: drop-shadow(0 0 0.7vw #30a3f2);
-    margin-top: -0.2vw;
+    margin-top: -0.1vw;
 }
 
 .hyperlinks a.active {
@@ -426,6 +441,7 @@ h3 {
     position: absolute;
     margin-top: 29.25vw;
     transition: opacity 0.3s, font-size 0.3s, margin-top 0.3s;
+    height: 10vh;
 }
 
 a {
@@ -458,3 +474,117 @@ a {
     transform-origin: left;
     transform: scaleX(1);
   }
+
+.projekter-container {
+    display: block;
+    margin-top: 15vh;
+    background-color: transparent;
+    width: 43.5vw;
+    position: absolute;
+    height: 100vh;
+}
+
+.projekt-img {
+    object-fit: cover;
+    width: 27.5vw;
+    height: 14vw;
+    border-radius: 1.2vw;
+    margin-left: 15.75vw;
+    box-shadow: 0 0vw 0.5vw rgba(255, 255, 255, 0.151);
+    border: #0000007a 0.1vw solid;
+    filter: blur(0.08vw);
+    transition: filter 0.25s, box-shadow 0.25s;
+    z-index: -1;
+}
+
+.projekt-img:hover {
+    filter: blur(0);
+    box-shadow: 0 0vw 0.75vw rgba(255, 255, 255, 0.251);
+}
+
+.projekt {
+    display: flex;
+    align-items: center;
+    margin-bottom: 9.5vh;
+}
+
+.projekt-titel {
+    font-size: 1.25vw;
+    font-weight: 600;
+    color: #dae8f2;
+    margin-bottom: 26vh;
+    text-overflow: clip;
+    margin-left: 0.5vw;
+    white-space: nowrap;
+    position: absolute;
+}
+
+.box {
+    background: radial-gradient(#0f0f0f 5%, #0f0f0fe7);
+    box-shadow: 0 0 0.5vw #a3a3a341;
+    border: #00000063 0.15vw solid;
+    width: 17.5vw;
+    height: 18vh;
+    border-radius: 1vw;
+    position: absolute;
+    z-index: 30;
+}
+
+.box p {
+    margin: 0.2vw;
+    margin-left: 0.5vw;
+    color: #fff;
+    font-size: 0.85vw;
+}
+
+.right {
+    margin-left: 0vw;
+}
+
+.right2 {
+    margin-left: 25.75vw;
+}
+
+.right3 {
+    margin-left: 37vw;
+    z-index: 3;
+}
+
+.snak {
+    position: absolute;
+    filter: drop-shadow(0 0 1.2vw #30a4f2a8);
+    font-size: 1.8vw;
+    --bg-size: 400%;
+    --color-one: #179af2;
+    --color-two: #0a327e;
+    background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: gradient 20s linear infinite;;
+    margin-top: 7.5vh;
+    margin-left: -23vw;
+}
+
+.snak-text {
+    position: absolute;
+    color: #fff;
+    margin-left: -18vw;
+    margin-top: 14vh;
+    font-size: 1.6vw;
+    width: 50%;
+}
+
+.highlight {
+    font-weight: bold;
+    --bg-size: 400%;
+    --color-one: #00aeff;
+    --color-two: #0041b9;
+    background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: gradient 5s linear infinite;
+    opacity: 1;
+    filter: drop-shadow(0 0 1vw #00aeff);
+}
