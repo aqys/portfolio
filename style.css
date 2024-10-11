@@ -390,7 +390,7 @@ h3 {
 	text-decoration: none;
 	opacity: 0.4;
 	position: absolute;
-	margin-top: 29.25vw;
+	margin-top: 28.5vw;
 	transition: opacity 0.3s, font-size 0.3s, margin-top 0.3s;
 	height: 10vh;
 }
