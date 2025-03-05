@@ -537,14 +537,13 @@ svg:active {
     }
 }
 
-
 /* skole forløb section */
 
 .skole-section .divider {
     margin-bottom: 0.5rem;
 }
 
-.skole-section {
+.skole-sectionen {
     flex-direction: column;
     width: 100%;
     display: flex;
