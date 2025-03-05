@@ -536,3 +536,37 @@ svg:active {
         line-height: 1.9rem;
     }
 }
+
+/* skole forløb section */
+
+.skole-section .divider {
+    margin-bottom: 0.5rem;
+}
+
+.skole-section {
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    margin-top: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.skole-title-div {
+    gap: .5rem;
+    display: flex;
+}
+
+.skole-title {
+    line-height: 1.75rem;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.skole-dato {
+    color: rgb(156, 163, 175);
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
